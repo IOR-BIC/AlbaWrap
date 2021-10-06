@@ -13,13 +13,14 @@
 # PURPOSE. See the above copyright notice for more information.
 #==========================================================================
 
-PROJECT (albaWarp)
+PROJECT (albaWrap)
 
 SET(PROJECT_SRCS 
 #Workflows.cpp 	Workflows.hpp
 appDecl.h
-workflows.cpp workflows.hpp
 pybind11.cpp
+albaWrapLogic.cpp albaWrapLogic.h
+workflows.cpp workflows.hpp
 )
 
 IF (NOT EXECUTABLE_OUTPUT_PATH)
@@ -33,10 +34,3 @@ SET(PROJECT_LIBS albaOperations albaGui albaViews albaVME albaInteraction albaSe
 pybind11_add_module(${PROJECT_NAME} ${PROJECT_SRCS})
 TARGET_LINK_LIBRARIES(${PROJECT_NAME} PRIVATE ${PROJECT_LIBS})
 
-
-# Generate Version File Info  
-INCLUDE (${albaWrap_SOURCE_DIR}/CMakeModules/DateTimeMacro.cmake)
-DATE2(date) #(dd-mm-yyyy)
-STRING (REPLACE "-" "/" APP_DATE ${date} )
-message(${PROJECT_NAME} " " ${APP_VERSION} " " ${APP_DATE})
-CONFIGURE_FILE(${PROJECT_SOURCE_DIR}/Version.txt.in ${PROJECT_BINARY_DIR}/${PROJECT_NAME}.txt @ONLY)

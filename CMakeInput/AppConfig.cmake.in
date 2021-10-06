@@ -1,0 +1,24 @@
+# Tell the user project where to find headers and libraries
+SET(APP_INCLUDE_DIRS
+  "@albaWrap_SOURCE_DIR@/Common"
+  "@albaWrap_SOURCE_DIR@/Operations"
+  "@albaWrap_SOURCE_DIR@/Views"
+  "@albaWrap_SOURCE_DIR@/VME"
+  "@albaWrap_SOURCE_DIR@/vtkAPP"
+  "@albaWrap_BINARY_DIR@"
+  "@albaWrap_BINARY_DIR@/vtkAPP"
+)
+
+SET(APP_BUILD_SETTINGS_FILE
+  "@albaWrap_BINARY_DIR@/APPBuildSettings.cmake"
+)
+
+INCLUDE(
+  "@albaWrap_BINARY_DIR@/APPLibraryDepends.cmake"
+)
+
+SET(APP_LIBRARY_DIRS "@albaWrap_BINARY_DIR@/bin")
+
+SET(APP_USE_FILE
+  "@albaWrap_BINARY_DIR@/APPUse.cmake"
+)

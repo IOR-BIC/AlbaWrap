@@ -1,23 +1,23 @@
 
-#include "sum.hpp"
+#include "workflows.hpp"
 #include <pybind11/pybind11.h>
 #include <pybind11/stl.h>
 
 namespace py = pybind11;
-using namespace baselib;
+using namespace albaWrap;
 
 
 
 
-PYBIND11_MODULE(baselib, m) {
+PYBIND11_MODULE(albaWrap, m) {
     m.doc() = "documentation string";
 
 
     // functions
     m.def(
-        "_sum_py", &sum_py,
-        py::arg("a"),
-        py::arg("b")
+        "albaAnsysCDBtoVTK", &albaAnsysCDBtoVTK,
+        py::arg("cdb_file_in"),
+        py::arg("vtk_file_out")
         );
 
 }

@@ -18,7 +18,7 @@ PROJECT (albaWarp)
 SET(PROJECT_SRCS 
 #Workflows.cpp 	Workflows.hpp
 appDecl.h
-sum.cpp sum.hpp
+workflows.cpp workflows.hpp
 pybind11.cpp
 )
 

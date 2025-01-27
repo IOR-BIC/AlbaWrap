@@ -1,6 +1,6 @@
 # AlbaWrap
 
-**AlbaWrap** is a Python wrapper for the [ALBA Library](https://github.com/IOR-BIC/Alba), designed to expose its core functionalities in a way that can be seamlessly utilized in Python environments. This project aims to bridge the gap between C++ implementations of ALBA and Python developers.
+**AlbaWrap** is a Python wrapper for the [ALBA Library](https://github.com/IOR-BIC/Alba), designed to expose its core functionalities in a way that can be seamlessly utilized in Python environments. This project aims to bridge the gap between C++ implementations of ALBA and both Python developers and researchers in the biomedical field.
 
 ---
 
@@ -20,57 +20,14 @@ Before using AlbaWrap, ensure that you have the following dependencies installed
 - **ALBA Library**: [GitHub Repository](https://github.com/IOR-BIC/Alba)
 - **Python**: Version 3.7 or later
 - **CMake**: Version 3.16 or later
-- **GCC/Clang/MSVC**: A supported C++ compiler
-- **SWIG**: For generating Python bindings
-
-You can install these requirements via your package manager (e.g., `apt`, `brew`, `choco`) or manually download them from their official websites.
+- **GCC/Clang/MSVC**: Visual studio 2015 or higher
 
 ---
 
-## Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/IOR-BIC/AlbaWrap.git
-   cd AlbaWrap
-   ```
-
-2. Initialize and update submodules:
-   ```bash
-   git submodule update --init --recursive
-   ```
-
-3. Build the project:
-   ```bash
-   mkdir build && cd build
-   cmake .. -DALBA_DIR=/path/to/ALBA
-   make
-   ```
-
-4. Install the Python bindings:
-   ```bash
-   python setup.py install
-   ```
-
----
 
 ## Usage
 
-Once installed, you can start using AlbaWrap in your Python scripts. Below is a basic example:
-
-```python
-import albawrap
-
-# Initialize AlbaWrap
-albawrap.initialize()
-
-# Example usage
-result = albawrap.some_function(param1, param2)
-print("Result:", result)
-
-# Finalize AlbaWrap
-albawrap.finalize()
-```
+WIP
 
 
 ## Contributing
@@ -115,10 +72,6 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ## Acknowledgments
 
-AlbaWrap is developed and maintained by [IOR-BIC](https://github.com/IOR-BIC). Special thanks to the contributors of the [ALBA Library](https://github.com/IOR-BIC/Alba) for their foundational work.
-
+AlbaWrap is developed and maintained by [IOR-BIC](https://github.com/IOR-BIC)
 ---
 
-## Contact
-
-For questions, suggestions, or issues, please open an issue in this repository or contact the maintainers via email: `support@ior-bic.org`.
